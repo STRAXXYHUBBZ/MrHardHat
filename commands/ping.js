@@ -7,7 +7,7 @@ module.exports = {
 	async execute(interation) {
 		interation.reply({content: `Getting Ping...`}).then((inter)=>{
 			interation.editReply({
-				content: `🏓Latency is ${Date.now() - interation.createdTimestamp}ms`,
+				content: `🏓test Latency is ${Date.now() - interation.createdTimestamp}ms`,
 				ephemeral: true
 			});
 		});
