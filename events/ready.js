@@ -6,7 +6,7 @@ module.exports = {
 	name: "ready",
 	once: true,
 	execute(client, commands) {
-		console.log("HardHat is online.");
+		console.log("HardHast is online.");
 		let servercount = client.guilds.cache.reduce((a, b) => a + b.memberCount, 0 )
 		setInterval(() => {
 			client.user.setActivity(`${client.guilds.cache.size} Servers/${servercount} Users!`, {type: "WATCHING"})
