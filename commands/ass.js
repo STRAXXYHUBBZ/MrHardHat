@@ -25,7 +25,7 @@ module.exports = {
   
     const data = await fetch(`https://meme-api.herokuapp.com/gimme/${reddit}`).then(res => res.json())
 
-    if (!data) return interaction.reply(`Sorry, seems like i can't connect to API.`);
+    if (!data) return interaction.reply({ content: `Sorry, seems like i can't connect to API.`, ephemeral: true});
   
     const { title, postLink, url, subreddit } = data
 
