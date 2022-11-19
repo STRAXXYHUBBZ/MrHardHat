@@ -9,6 +9,7 @@ module.exports = {
 		const guildSettings = await GuildSettings.findOne({ guild_id: member.guild.id });
 
 		if (!guildSettings) return;
+		if (!guildSettings.welcome_message) return;
 
 		const newMemberEmbed = new Discord.MessageEmbed()
 			.setColor("#d81e5b")
