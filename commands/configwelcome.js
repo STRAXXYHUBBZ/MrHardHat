@@ -7,7 +7,7 @@ module.exports = {
 		.setName("configwelcome")
 		.setDescription("Configurate your welcome settings")
 		.addSubcommand(sub => sub
-			  .setName("welcomeMessage")
+			  .setName("welcomemessage")
 			  .addStringOption(opt => opt.setName("text"))
 		  )
 		  .addSubcommand(sub => sub
@@ -53,7 +53,7 @@ if (interaction.options.getSubcommand() === 'channel') {
 	}
 
 
-	if (interaction.options.getSubcommand() === 'welcomeMessage') {
+	if (interaction.options.getSubcommand() === 'welcomemessage') {
 		// Check for admin permissions
 		if (!interaction.member.permissions.has([Permissions.FLAGS.ADMINISTRATOR])) {
 			interaction.reply("You do not have permission to use this command!");
@@ -70,10 +70,10 @@ if (interaction.options.getSubcommand() === 'channel') {
 			if (!settings) {
 				settings = new GuildSettings({
 					guild_id: interaction.guild.id,
-					welcome_message: interaction.options.getChannel("welcomeMessage").id
+					welcome_message: interaction.options.getChannel("welcomemessage").id
 				});
 			} else {
-				settings.welcome_message = interaction.options.getChannel("welcomeMessage").id;
+				settings.welcome_message = interaction.options.getChannel("welcomemessage").id;
 			}
 
 			settings.save(err => {
@@ -83,7 +83,7 @@ if (interaction.options.getSubcommand() === 'channel') {
 					return;
 				}
 
-				interaction.reply(`Welcome message has been set to ``${interaction.options.getChannel("welcomeMessage").id}```);
+				interaction.reply(`Welcome message has been set to ``${interaction.options.getChannel("welcomemessage").id}```);
 			})
 		})
 	}
