@@ -9,12 +9,12 @@ module.exports = {
 		.addSubcommand(sub => sub
 			  .setName("welcomemessage")
 			  .setDescription("Sets the message users get when they join.")
-			  .addStringOption(opt => opt.setName("text"))
+			  .addStringOption(opt => opt.setName("text"), opt.setDescription("Sets the message users get when they join."))
 		  )
 		  .addSubcommand(sub => sub
 			  .setName("channel")
 			  .setDescription("Sets the channel for when new users join.")
-			  .addChannelOption(opt => opt.setName("channel"))
+			  .addChannelOption(opt => opt.setName("channel"), opt.setDescription("Sets the message users get when they join."))
 		  ),
 	async execute(interaction) {
 		
