@@ -8,13 +8,11 @@ module.exports = {
 		.setDescription("Configurate your welcome settings")
 		.addSubcommand(sub => sub
 			  .setName("welcomemessage")
-			  .setDescription("Sets the message users get when they join.")
-			  .addStringOption(opt => opt.setName("text"), opt.setDescription("Sets the message users get when they join."))
+			  .addStringOption(opt => opt.setName("text") .setDescription("Sets the message users get when they join."))
 		  )
 		  .addSubcommand(sub => sub
 			  .setName("channel")
-			  .setDescription("Sets the channel for when new users join.")
-			  .addChannelOption(opt => opt.setName("channel"), opt.setDescription("Sets the message users get when they join."))
+			  .addChannelOption(opt => opt.setName("channel") .setDescription("Sets the channel for when new users join."))
 		  ),
 	async execute(interaction) {
 		
