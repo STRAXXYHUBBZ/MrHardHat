@@ -38,7 +38,7 @@ module.exports = {
     if(interaction.channel.nsfw){
       interaction.reply({ embeds: [embed], ephemeral: true});
     }else{
-      interaction.reply("This channel must be NSFW!!")
+      interaction.reply({content: "<:crossmark:1004681866558849104> To use NSFW commands, please go to a NSFW channel!", ephemeral: true});
     }
 
 	}
