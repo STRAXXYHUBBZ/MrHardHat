@@ -23,7 +23,7 @@ module.exports = {
 
         )
         .addFields(
-            { name: '<:nsfw:1004676157041553478> NSFW', value: `\n``Ass```, inline: true },
+            { name: '<:nsfw:1004676157041553478> NSFW', value: "\n``Ass``", inline: true },
     
             { name: '<:animals:1004676295562637373> Animals', value: `\nDog`, inline: true },
 
