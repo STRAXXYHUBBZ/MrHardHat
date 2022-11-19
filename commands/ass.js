@@ -35,7 +35,7 @@ module.exports = {
     .setURL(`${postLink}`)
     .setImage(`${url}`)
     .setFooter(`/reddit/${subreddit}`);
-    if(!interaction.channel.nsfw){
+    if(interaction.channel.nsfw){
       interaction.reply({ embeds: [embed], ephemeral: true});
     }else{
       interaction.reply("This channel must be NSFW!!")
