@@ -12,7 +12,7 @@ module.exports = {
 		  )
 		  .addSubcommand(sub => sub
 			  .setName("channel")
-			  .addChannelOption(opt => opt.setName("Welcome channel"))
+			  .addChannelOption(opt => opt.setName("channel"))
 		  ),
 	async execute(interaction) {
 		
