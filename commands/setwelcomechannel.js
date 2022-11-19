@@ -42,7 +42,7 @@ module.exports = {
 					return;
 				}
 
-				interaction.reply(`Welcome channel has been set to ${interaction.options.getChannel("welcome")}`);
+				interaction.reply(`Welcome channel has been set to <#${interaction.options.getChannel("welcome").id}>`);
 			})
 		})
 
