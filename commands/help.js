@@ -17,7 +17,7 @@ module.exports = {
         .addFields(
         { name: '<:moderation:1004643656508117082> Moderation', value: `\nBan\nKick\nTimeout`, inline: true },
 
-        { name: '<:config:1004643855771127818> Configuration', value: `\nSetwelcomechannel`, inline: true },
+        { name: '<:config:1004643855771127818> Configuration', value: `\nconfig`, inline: true },
         
         { name: '<:misc:1004643782395973712> Misc', value: `\nAvatar\nPing\nUserinfo\nInvite`, inline: true },
 
@@ -30,6 +30,6 @@ module.exports = {
             { name: '<:fun:1004676242781523968> Fun', value: `\nPickupline\nPPSize`, inline: true },
             )
         .setTimestamp()
-        interaction.reply({ embeds: [embed] })
+        interaction.reply({ embeds: [embed], ephemeral: true })
 	}
 }
